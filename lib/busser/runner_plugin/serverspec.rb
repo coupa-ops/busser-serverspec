@@ -59,6 +59,7 @@ class Busser::RunnerPlugin::Serverspec < Busser::RunnerPlugin::Base
       if Gem::Version.new(RUBY_VERSION.dup) < Gem::Version.new('2.0')
         banner('Installing net-ssh < 2.10')
         install_gem('net-ssh', '< 2.10')
+        install_gem('net-telnet', '= 0.1.1')
       end
       banner('Installing Serverspec..')
       spec = install_gem('serverspec')
